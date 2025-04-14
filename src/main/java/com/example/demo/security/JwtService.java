@@ -8,7 +8,7 @@ import java.util.function.Function;
 @Service
 public class JwtService {
 
-    private final String SECRET_KEY = "your_secret_key_here"; // use a strong secret
+    private final String SECRET_KEY = "panzoSuperSecretKeyForJWT123";
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
