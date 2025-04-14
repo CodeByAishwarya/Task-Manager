@@ -26,7 +26,7 @@ public class SecurityConfig {
     private UserDetailsService userDetailsService;
 
     @Autowired
-    private PasswordEncoder passwordEncoder; // ✅ Autowire it from ApplicationConfig
+    private PasswordEncoder passwordEncoder; 
 
     @Bean
     public AuthenticationProvider authenticationProvider() {
