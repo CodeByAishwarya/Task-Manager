@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin("*") // Allow access from Angular 
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/api/tasks")
 public class TaskController {
