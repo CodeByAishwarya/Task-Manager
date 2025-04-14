@@ -33,8 +33,8 @@ public class AuthService {
     user.setEmail(request.getEmail());
     user.setPassword(passwordEncoder.encode(request.getPassword()));
 
-    System.out.println("🔐 Registered user: " + user.getUsername());
-    System.out.println("🔐 Hashed password saved in DB: " + user.getPassword());
+    System.out.println("registered user: " + user.getUsername());
+    System.out.println("password saved in DB: " + user.getPassword());
 
     userRepository.save(user);
 
@@ -44,7 +44,7 @@ public class AuthService {
 
 
     public AuthResponse login(LoginRequest request) {
-    System.out.println("🔑 Login attempt - Username: " + request.getUsername() + ", Password: " + request.getPassword());
+    System.out.println("login with - Username: " + request.getUsername() + ", Password: " + request.getPassword());
 
     authenticationManager.authenticate(
         new UsernamePasswordAuthenticationToken(
